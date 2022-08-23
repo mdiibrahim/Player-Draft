@@ -10,8 +10,13 @@ document.getElementById('btn-player-calculate').addEventListener('click', functi
     //all player expenses
     const AllPlayerExpensesElement = document.getElementById('all-player-expenses');
     if ((Number.isNaN(perPlayerTaka) == false && Math.sign(perPlayerTaka) == 1)) {
-        const AllPlayerExpenses = perPlayerTaka * totalSelectedPlayerNumber;
+        if (totalSelectedPlayerNumber > 0) {
+            const AllPlayerExpenses = perPlayerTaka * totalSelectedPlayerNumber;
         AllPlayerExpensesElement.innerText = AllPlayerExpenses;
+        }
+        else {
+            alert('Please! Select at least one player!')
+        }
     }
     else {
         perPlayerTakaInputField.value = '';
