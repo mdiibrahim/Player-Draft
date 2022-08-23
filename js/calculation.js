@@ -12,7 +12,7 @@ document.getElementById('btn-player-calculate').addEventListener('click', functi
     if ((Number.isNaN(perPlayerTaka) == false && Math.sign(perPlayerTaka) == 1)) {
         if (totalSelectedPlayerNumber > 0) {
             const AllPlayerExpenses = perPlayerTaka * totalSelectedPlayerNumber;
-        AllPlayerExpensesElement.innerText = AllPlayerExpenses;
+            AllPlayerExpensesElement.innerText = AllPlayerExpenses;
         }
         else {
             alert('Please! Select at least one player!')
