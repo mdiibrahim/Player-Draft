@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Draft</title>
+    <!-- CSS Framework -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Baloo Bhaina 2', cursive;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <header>
+        <div class="flex flex-row py-20">
+
+            <div>
+                <img src="images/banner.png"  alt="">
+            </div>
+            <div>
+                <h1 class="text-6xl text-red-500 font-bold">Player Draft 2022</h1>
+                <p class="text-white text-sm">The draft ensures that no one team can sign up all the best players, spreading the
+                    best talent around and keeping the league competitive. See the best remaining players on the draft
+                    board during the 2022 for PSG!</p>
+            </div>
+            <div>
+                <img src="images/Card-psg.png" alt="">
+                <img src="images/soccer.png" alt="" class="">
+            </div>
+        </div>
+
+    </header>
+    <main class="bg-zinc-800">
+        <section class="w-9/12 mx-auto">
+            <div class="grid grid-cols-4  py-12 gap-4">
+                <div class="text-white  text-center00">
+                    <img src="images/players/player-1.png" alt="" class="block">
+                    <div class="py-4 px-3 bg-black">
+                        <h3 id="player-name-1" class="text-lg font-semibold">Lionel Messi</h3>
+                        <p class="text-sm">700 Goals <span class="mx-1">.</span> 350 Assist</p>
+                        <button id="btn-player-select-1" class="bg-sky-800 py-2 text-center w-full mt-4 disabled:cursor-not-allowed disabled:bg-zinc-500 hover:bg-red-500 rounded-lg">SELECT</button>
+                    </div>
+                </div>
+                <div class="text-white  text-center">
+                    <img src="images/players/player-2.png" alt="" class="block">
+                    <div class="py-4 px-3 bg-black">
+                        <h3 id="player-name-2" class="text-lg font-semibold">Neymar Jr</h3>
+                        <p class="text-sm">500 Goals <span class="mx-1">.</span> 215 Assist</p>
+                        <button  id="btn-player-select-2" class="bg-sky-800 py-2 text-center w-full mt-4 disabled:cursor-not-allowed disabled:bg-zinc-500 hover:bg-red-500 rounded-lg">SELECT</button>
+                    </div>
+                </div>
+                <div class="text-white text-center">
+                    <img src="images/players/player-3.png" alt="" class="block">
+                    <div class="py-4 px-3 bg-black">
+                        <h3 id="player-name-3" class="text-lg font-semibold">Kylian Mbappé</h3>
+                        <p class="text-sm">360 Goals <span class="mx-1">.</span> 220 Assist</p>
+                        <button id="btn-player-select-3" class="bg-sky-800 py-2 text-center w-full mt-4 disabled:cursor-not-allowed disabled:bg-zinc-500 hover:bg-red-500 rounded-lg">SELECT</button>
+                    </div>
+                </div>
+
+                <!-- Selected player -->
+                <div class="bg-black px-5">
+                    <h3 class="text-white text-center mt-5" >Selected Players</h3>
+                    <img src="images/marker1.png" alt="" class="mx-auto mb-4">
+                    <ol id="selected-player" class="text-neutral-300">
+                    
+                    </ol>
+                </div>
+                <div class="text-white text-centerr0">
+                    <img src="images/players/player-4.png" alt="" class="block">
+                    <div class="py-4 px-3 bg-black">
+                        <h3 id="player-name-4" class="text-lg font-semibold">Vítor Machado</h3>
+                        <p class="text-sm">306 Goals <span class="mx-1">.</span> 180 Assist</p>
+                        <button id="btn-player-select-4" class="bg-sky-800 py-2 text-center w-full mt-4 disabled:cursor-not-allowed disabled:bg-zinc-500 hover:bg-red-500 rounded-lg">SELECT</button>
+                    </div>
+                </div>
+                <div class="text-white text-centerr0">
+                    <img src="images/players/player-5.png" alt="" class="block">
+                    <div class="py-4 px-3 bg-black">
+                        <h3  id="player-name-5" class="text-lg font-semibold">Sergio Ramos</h3>
+                        <p class="text-sm">260 Goals <span class="mx-1">.</span> 150 Assist</p>
+                        <button id="btn-player-select-5" class="bg-sky-800 py-2 text-center w-full mt-4 disabled:cursor-not-allowed disabled:bg-zinc-500 hover:bg-red-500 rounded-lg">SELECT</button>
+                    </div>
+                </div>
+                <div class="text-white text-centerr0">
+                    <img src="images/players/player-6.png" alt="" class="block">
+                    <div class="py-4 px-3 bg-black">
+                        <h3 id="player-name-6" class="text-lg font-semibold">Renato Sanches</h3>
+                        <p class="text-sm">560 Goals <span class="mx-1">.</span> 320 Assist</p>
+                        <button id="btn-player-select-6" class="bg-sky-800 py-2 text-center w-full mt-4 disabled:cursor-not-allowed disabled:bg-zinc-500 hover:bg-red-500 rounded-lg">SELECT</button>
+                    </div>
+                </div>
+                <div class="text-neutral-300 text-sm px-5 py-6 bg-black">
+                    <h3 class="text-white text-center text-2xl">Budget</h3>
+                    <img src="images/marker2.png" alt="" class="mx-auto">
+                    <div>
+                        <span>Per Player:</span> <input id="per-player-field" class="w-6/12 text-blue-700 px-3 py-1" type="text">
+                    </div>
+                    <button id="btn-player-calculate" class="bg-sky-800 py-2 text-center text-white w-full mt-4 hover:bg-amber-500 rounded-xl">Calculate</button>
+                    <p>
+                        Player Expenses <span class="ml-2">$<span id="all-player-expenses">000</span></span>
+                    </p>
+                    <div class="mb-2">
+                        <span>Manager</span> <input id="manager-expenses" class="w-6/12 text-blue-700 px-3 py-1" type="text">
+                    </div>
+                    <div>
+                        <span>Coach</span> <input id="coach-expenses" class="w-6/12 text-blue-700 px-3 py-1" type="text">
+                    </div>
+                    <button id="btn-total-calculation" class="bg-sky-800 py-2 text-center text-white w-full mt-4 hover:bg-amber-500 rounded-xl ">Calculate Total</button>
+                    <p>
+                        Total <span class="ml-2">$<span id="total-expenses">000</span></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <hr>
+            <p class="text-center text-white text-sm py-10">
+                Copyright @ 2022 Player Draft All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+<script src="js/player.js"></script>
+<script src="js/calculation.js"></script>
+<script src="js/totalCalculation.js"></script>
+</body>
+
+</html>
