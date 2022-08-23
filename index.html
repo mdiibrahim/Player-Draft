@@ -16,6 +16,7 @@
         body {
             font-family: 'Baloo Bhaina 2', cursive;
         }
+        
     </style>
 </head>
 
@@ -76,9 +77,10 @@
                 <div class="bg-black px-5">
                     <h3 class="text-white text-2xl text-center mt-5">Selected Players</h3>
                     <img src="images/marker1.png" alt="" class="mx-auto mb-4">
-                    <ol id="selected-player" class="text-neutral-300">
+                    <ol id="selected-player" class="text-neutral-300 list-decimal">
 
                     </ol>
+                    
                 </div>
                 <div class="text-white text-center">
                     <img src="images/players/player-4.png" alt="" class="w-full">
@@ -107,7 +109,7 @@
                             class="bg-sky-800 py-2 text-center w-full mt-4 disabled:cursor-not-allowed disabled:bg-zinc-500 hover:bg-red-500 rounded-lg">SELECT</button>
                     </div>
                 </div>
-                <div class="text-neutral-300 text-sm px-5 py-6 bg-black">
+                <div class="text-neutral-300 text-sm px-2 py-6 bg-black">
                     <h3 class="text-white text-center text-2xl">Budget</h3>
                     <img src="images/marker2.png" alt="" class="mx-auto">
                     <div>
@@ -115,23 +117,24 @@
                             type="text">
                     </div>
                     <button id="btn-player-calculate"
-                        class="bg-sky-800 py-2 text-center text-white w-full mt-4 hover:bg-amber-500 rounded-xl">Calculate</button>
-                    <p>
-                        Player Expenses <span class="ml-2">$<span id="all-player-expenses">000</span></span>
+                        class="bg-sky-800 py-2 text-center text-white w-full my-4 hover:bg-amber-500 rounded-xl">Calculate
+                    </button>
+                    <p class="mb-2">
+                        Player Expenses <span class="ml-2">$<span id="all-player-expenses">00</span></span>
                     </p>
-                    <div class="mb-2">
-                        <span>Manager</span> <input id="manager-expenses" class="w-6/12 text-blue-700 px-3 py-1"
+                    <p class="mb-2">
+                        <span>Manager:</span> <input id="manager-expenses" class="w-6/12 text-blue-700 px-3 py-1"
                             type="text">
-                    </div>
-                    <div>
-                        <span>Coach</span> <input id="coach-expenses" class="w-6/12 text-blue-700 px-3 py-1"
+                    </p>
+                    <p>
+                        <span>Coach:</span> <input id="coach-expenses" class="w-6/12 text-blue-700 px-3 py-1"
                             type="text">
-                    </div>
+                    </p>
                     <button id="btn-total-calculation"
                         class="bg-sky-800 py-2 text-center text-white w-full mt-4 hover:bg-amber-500 rounded-xl ">Calculate
                         Total</button>
-                    <p>
-                        Total <span class="ml-2">$<span id="total-expenses">000</span></span>
+                    <p class="mt-3">
+                        Total Expenses:<span class="ml-2">$<span id="total-expenses">00</span></span>
                     </p>
                 </div>
             </div>
@@ -144,7 +147,9 @@
                 Copyright @ 2022 Player Draft All Rights Reserved.
             </p>
         </div>
+    
     </footer>
+    <script src="js/common.js"></script>
     <script src="js/player.js"></script>
     <script src="js/calculation.js"></script>
     <script src="js/totalCalculation.js"></script>
