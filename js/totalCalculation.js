@@ -10,7 +10,30 @@ document.getElementById('btn-total-calculation').addEventListener('click', funct
     const allPlayerExpensesTaka = getAllPlayerExpenses('all-player-expenses');
 
     //total expenses
-    const totalExpenses = managerExpensesTaka + coachExpensesTaka + allPlayerExpensesTaka;
     const totalExpensesElement = document.getElementById('total-expenses');
-    totalExpensesElement.innerText = totalExpenses;
+    if ((Number.isNaN(managerExpensesTaka) == false) && (Number.isNaN(coachExpensesTaka) == false)) {
+        if (Math.sign(managerExpensesTaka) == 1 && Math.sign(coachExpensesTaka) == 1) {
+            if (Math.sign(allPlayerExpensesTaka) == 1) {
+                const totalExpenses = managerExpensesTaka + coachExpensesTaka + allPlayerExpensesTaka;
+                totalExpensesElement.innerText = totalExpenses;
+            }
+            else {
+                alert('You have to be honor each oh the selected player!');
+            }
+        }
+        else {
+            document.getElementById('coach-expenses').value = '';
+            document.getElementById('manager-expenses').value = '';
+            alert('You have to be honor the coach or the manager');
+        }
+
+
+    }
+    else {
+        document.getElementById('coach-expenses').value = '';
+        document.getElementById('manager-expenses').value = '';
+        alert('Enter a valid number');
+    }
+
+
 })

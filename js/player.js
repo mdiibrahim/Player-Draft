@@ -15,8 +15,6 @@ function selectPlayer(playerSelectBtn, selectedPlayerName) {
         else {
             alert("You cannot select more than 5 player");
         }
-
-
     })
 }
 selectPlayer('btn-player-select-1', 'player-name-1');
