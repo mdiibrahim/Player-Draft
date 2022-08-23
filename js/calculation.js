@@ -17,5 +17,5 @@ document.getElementById('btn-player-calculate').addEventListener('click', functi
         perPlayerTakaInputField.value = '';
         alert("Give a handsome honorary")
     }
-    
+
 })

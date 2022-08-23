@@ -5,7 +5,7 @@ document.getElementById('btn-total-calculation').addEventListener('click', funct
 
     //coach expenses
     const coachExpensesTaka = getOthersExpenses('coach-expenses');
-    
+
     //all player expenses
     const allPlayerExpensesTaka = getAllPlayerExpenses('all-player-expenses');
 

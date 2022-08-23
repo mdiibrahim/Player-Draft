@@ -2,13 +2,13 @@
 function getOthersExpenses(othersExpenses) {
     const expensesInputField = document.getElementById(othersExpenses);
     const expensesTaka = parseFloat(expensesInputField.value);
-    if (Number.isNaN(expensesTaka) == false && Math.sign(expensesTaka) == 1){
+    if (Number.isNaN(expensesTaka) == false && Math.sign(expensesTaka) == 1) {
         return expensesTaka;
     }
     else {
         alert('You have to be honor the coach or the manager');
     }
-    
+
 }
 
 //all players expenses function
@@ -21,5 +21,5 @@ function getAllPlayerExpenses(playersExpenses) {
     else {
         alert('You have to be honor each oh the selected player!');
     }
-    
+
 }
